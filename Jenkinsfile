@@ -50,7 +50,7 @@ stage(" Docker Build ") {
             stage('Deployment') {
             steps {
                 echo '<--------------- deployment started  --------------->'
-                sh './deploy.sh'
+                sh 'helm install node node-0.1.0.tgz'
                 echo '<------------- deployment stopped  --------------->'
             }
         }  
